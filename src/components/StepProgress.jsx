@@ -4,15 +4,13 @@ import 'react-step-progress-bar/styles.css';
 
 const StepProgress = () => {
   const steps = ["Underlying asset", "Amount", "Fees optimization", "Review"];
-  const [isDeposit, setIsDeposit] = useState(true); // For toggling Deposit/Withdraw
-  const [currentStep, setCurrentStep] = useState(0); // To manage steps
+  const [isDeposit, setIsDeposit] = useState(true); 
+  const [currentStep, setCurrentStep] = useState(0);
 
-  // Function to handle step click
   const handleStepClick = (stepIndex) => {
     setCurrentStep(stepIndex);
   };
 
-  // Function to handle Deposit/Withdraw toggle
   const handleToggle = () => {
     setIsDeposit((prev) => !prev);
   };
